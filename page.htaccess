@@ -2,5 +2,5 @@
 RewriteEngine On
 RewriteCond %{HTTP_USER_AGENT} (iPhone|Android.*Mobile|Windows.*Phone) [NC]
 RewriteCond %{QUERY_STRING} !mode=pc
-RewriteRule ^$ /sp/ [R,L]
+RewriteRule ^$ /s/ [R,L]
 </IfModule>

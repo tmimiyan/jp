@@ -1,0 +1,32 @@
+<html>
+    <meta charset='utf-8'/>
+    <title>浜急掲示板
+</title>
+    <script src='xmlHttp.js'></script>
+    <body bgcolor='#333333' text='#FFFFFF' style='font-family:sans-serif;'><script type="text/javascript" src="https://ad.netowl.jp/js/star-php.js"></script>
+        <script>
+
+        </script>
+        <h2>みみやん掲示板</h2>
+<p>雑談や質問など自由にどうぞ</p>
+<p>マナーを守ってご利用ください。</p>
+
+        <form method='post' enctype='multipart/form-data' action='icon.php'>
+        <input type='file' name='upfile' accept='image/*'>
+        <input type='submit' value='アイコン変更'>
+        </form>
+
+        <form action='./send.php' method='post'>
+            <input type='hidden' name='bbs' value='hamaq'>
+            <p><textarea name='message' cols='30' rows='3' id='f1'></textarea></p>
+            <p>名前:<input type='text' name='name' value='プーチン'><input type='submit' name='send' value='送信'></p>
+        </form>
+        <hr>
+        <div id='resultData'></div>
+        <form name='loadmore'></form>
+            <input type='button' value='さらに読みこむ' onClick='loadTextFile(2)'>
+        </form>
+        <br>
+        <script src='chat.js'></script>
+    </body>
+</html>

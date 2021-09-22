@@ -1,7 +1,7 @@
 /*
   JavaScript
 
-  (C) 2020 Š”®‰ïĞƒWƒƒƒXƒgƒVƒXƒeƒ€
+  (C) 2020 æ ªå¼ä¼šç¤¾ã‚¸ãƒ£ã‚¹ãƒˆã‚·ã‚¹ãƒ†ãƒ 
 */
 
 <!--
@@ -116,9 +116,9 @@ function _HpbPwdWnd(thisLink,keyString)
 	PW.document.open();
 	PW.document.writeln('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">');
 	PW.document.writeln('<HTML><HEAD>');
-	PW.document.writeln('<META http-equiv="Content-Type" content="text/html; charset=utf-8">');
+	PW.document.writeln('<META http-equiv="Content-Type" content="text/html; charset="utf-8">');
 	PW.document.writeln('<META http-equiv="Content-Style-Type" content="text/css">');
-	PW.document.writeln('<TITLE>ƒpƒXƒ[ƒh•t‚«ƒŠƒ“ƒN</TITLE>');
+	PW.document.writeln('<TITLE>ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ä»˜ããƒªãƒ³ã‚¯</TITLE>');
 
 	PW.document.writeln('<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">');
 	PW.document.writeln('<!--');
@@ -208,7 +208,7 @@ function _HpbPwdWnd(thisLink,keyString)
 	PW.document.writeln('</HEAD>');
 	PW.document.writeln('<BODY onload="document.keyinform.keyin.focus()" onblur="document.keyinform.keyin.focus()" onerror="window.close();">');
 	PW.document.writeln('<DIV align="center">');
-	PW.document.writeln('<P>ƒpƒXƒ[ƒh‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B</P>');
+	PW.document.writeln('<P>ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚</P>');
 	PW.document.writeln('<FORM name="keyinform" method="POST" onsubmit="' + strCheckFunction + 'return false;">');
 	PW.document.writeln('<INPUT size="20" type="password" name="keyin">');
 	PW.document.writeln(strOkButton);

@@ -118,6 +118,7 @@ function _HpbPwdWnd(thisLink,keyString)
 	PW.document.writeln('<HTML><HEAD>');
 	PW.document.writeln('<META http-equiv="Content-Type" content="text/html; charset="udf-8">');
 	PW.document.writeln('<META http-equiv="Content-Style-Type" content="text/css">');
+	PW.document.writeln('<meta name="viewport" content="width=device-width, initial-scale=1.0"/>');
 	PW.document.writeln('<TITLE>パスワード付きリンク</TITLE>');
 
 	PW.document.writeln('<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">');

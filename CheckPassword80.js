@@ -116,7 +116,7 @@ function _HpbPwdWnd(thisLink,keyString)
 	PW.document.open();
 	PW.document.writeln('<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">');
 	PW.document.writeln('<HTML><HEAD>');
-	PW.document.writeln('<META http-equiv="Content-Type" content="text/html; charset="utf-8">');
+	PW.document.writeln('<META http-equiv="Content-Type" content="text/html; charset="udf-8">');
 	PW.document.writeln('<META http-equiv="Content-Style-Type" content="text/css">');
 	PW.document.writeln('<TITLE>パスワード付きリンク</TITLE>');
 

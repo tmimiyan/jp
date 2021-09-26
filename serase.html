@@ -1,0 +1,69 @@
+<html lang="ja">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>関係者ページ</title>
+        <style type="text/css">
+            textarea{width:70%;height:40%;}
+        </style>
+    </head>
+    <body>
+    <a class="customs_button" href="index.html">戻る</a><br><br>
+        <h1><p align="center">関係者用メモ</p></h1>
+        <form name="form1">
+            <p align="center"><textarea name="Memo"></textarea></p>
+        </form>
+        <p>
+            <p align="center"><input type="button" value="保存" onclick=save(); ></input>
+            <input type="button" value="読込" onclick=load(); ></input></p>
+        </p>
+            <script type="text/javascript">
+                // 読込
+                function load() {
+                    var MemoData = "";
+                    if(!localStorage.getItem('MemoData')) {
+                        MemoData = "メモは登録されていません。";
+                    } else {
+                        MemoData = localStorage.getItem('MemoData');
+                    }
+                    document.form1.Memo.value = MemoData;
+                }
+                // 保存
+                function save() {
+                    var MemoData = document.form1.Memo.value;
+                    localStorage.setItem('MemoData', MemoData);
+                }
+            </script>
+            
+<br><br><p align="center"><iframe src="https://discord.com/widget?id=814893799892582421&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></p><br>
+        </body>
+        <style>
+a.customs_button
+{
+background-color: #afb2b8;
+color: black;
+font-weight: normal;
+padding: 2px 17px;
+border-radius: 12px;
+display: inline-block;
+text-decoration: none;
+text-align: center;
+position: relative;
+box-shadow: 0 3px 0 #91949a;
+font-size: 16px;
+}
+
+/* マウスカーソルON時に不透明度を変更 */
+a.customs_button:hover
+{
+opacity: 0.6;
+}
+
+/* クリック感を演出 */
+a.customs_button:active
+{
+top: 3px;
+box-shadow: none;
+}
+</style>
+</html>

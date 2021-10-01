@@ -1,4 +1,0 @@
-AuthType     Basic
-AuthName     みみやんのホームページ
-AuthUserFile /tmimiyan/jp/.htpassword
-require valid-user

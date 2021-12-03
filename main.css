@@ -437,3 +437,12 @@ padding: 0 auto;
 .ffn_btn {
    max-width: 80%;  /* 横幅に合わせて自動縮小するが、拡大はしない */
 }
+
+.etn_btn {
+  width: 600px;
+  height: auto;
+}
+
+.etn_btn {
+   max-width: 80%;  /* 横幅に合わせて自動縮小するが、拡大はしない */
+}

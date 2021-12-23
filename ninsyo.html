@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="shortcut icon" href="favicon2.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow">
+<title>パスワード認証</title>
+</head>
+
+<script type="text/javascript">
+<!--
+function IdPwChecker(f){
+var myid = f.elements["myid"];
+var mypw = f.elements["mypw"];
+
+var idbln, pwbln;//真偽値
+//入力があったら真偽をチェック
+if( myid.value != "") idbln = matchChecker( myid.value, "mkmp" );
+if( mypw.value != "") pwbln = matchChecker( mypw.value, "nn7y" );
+
+if( idbln == true && pwbln == true ) location.href = "serase.html";
+else{
+alert("パスワードもしくはIDが違います。");
+}
+
+return false;//formのsubmitアクションをストップ
+}
+function matchChecker( v, str ){
+var re = new RegExp( str );
+return re.test(v);//一致したらtrue、不一致ならfalseを返す
+}
+//-->
+</script>
+</head>
+<body>
+
+<a class="customs_button" href="index.html">戻る</a>
+<h2><p align="center">パスワード認証</p></h2>
+<b><p align="center">・このページは保護されています。パスワードの認証をお願いします。</p></b>
+
+<form name="form1" action="#" onsubmit="return IdPwChecker(this)">
+<p><p align="center"></label><input type="text" placeholder="ID" name="myid" id="myid" value="" size="25"></p></p>
+<p><p align="center"></label><input type="password" placeholder="パスワード" name="mypw" id="mypw" value="" size="25" autocomplete="off"></p></p>
+<p><p align="center"><input type="submit" name="login" id="login" value="ログイン"></p></p>
+</form>
+
+</body>
+
+<style>
+a.customs_button
+{
+background-color: #afb2b8;
+color: black;
+font-weight: normal;
+padding: 2px 17px;
+border-radius: 12px;
+display: inline-block;
+text-decoration: none;
+text-align: center;
+position: relative;
+box-shadow: 0 3px 0 #91949a;
+font-size: 16px;
+}
+
+/* マウスカーソルON時に不透明度を変更 */
+a.customs_button:hover
+{
+opacity: 0.6;
+}
+
+/* クリック感を演出 */
+a.customs_button:active
+{
+top: 3px;
+box-shadow: none;
+}
+</style>
+
+</html>

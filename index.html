@@ -301,12 +301,10 @@ function slotMove(obj, slotno){
 
 </script>
 
-<p style="background: url(omikuji.png);" class="gazou">
 <div class="omikujibase">
    <p id="KujiRes" class="kRes">？？</p>
    <p id="KujiCom" class="kCom">＊＊＊</p>
 </div>
-</p>
 <p align="center"><a class="button" onclick="ShowKuji( 'KujiRes', 'KujiCom' );">プレイ</a></p>
 
 <script type="text/javascript"><!--
@@ -328,6 +326,31 @@ function ShowKuji(kRes,kCom) {
    document.getElementById(kCom).innerHTML = mcom[kuji];
 }
 // --></script>
+
+<style>
+.button {
+   /* ボタンの表示 */
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+  display: inline-block;
+  padding: 0.5em 5em;
+  text-decoration: none;
+  background-color: #3e8a4c;
+  box-shadow: 0px 0px 0px 2px #0a0a0a;
+  color: #fff;
+  border: solid 2px #316d42;
+  border-top: solid 2px #64cb55;
+}
+
+.button:hover {
+  background-color: #429255;
+}
+
+.button:active {
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+</style>
 
 <br><h3><span style="font-family: @UD デジタル 教科書体 N-R;"><p align="center">2022年度新オープニング！！</p></span></h3>
 

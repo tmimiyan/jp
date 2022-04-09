@@ -3,7 +3,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>テキスト検索機能の組み込み</title>
-<script type="text/javascript" src="./テキスト検索機能の組み込み_files/xmlhttp.js.ダウンロード"></script>
+<script type="text/javascript" src="xmlhttp.js"></script>
 <script type="text/javascript"><!--
 function loadTextFile(fName)
 {
@@ -25,7 +25,7 @@ if ((httpObj.readyState == 4) && (httpObj.status == 200))
 }
 // --></script>
 </head>
-<body onload="loadTextFile(&#39;sample3.csv&#39;)">
+<body onload="loadTextFile('sample3.csv')">
 <h1>テキスト検索機能の組み込み</h1>
 <!--★-->
 <form name="ajaxForm" onsubmit="output_result(); return false">

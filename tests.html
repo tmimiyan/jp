@@ -147,7 +147,7 @@ function output_result() {
 function output_text(num) {
 	var n;
 		
-	var t = "<p>" + list[num][1] + " 【" + list[num][2] + "】 執行期間：" + list[num][3] + "<br>" + " 処分の種類：" + list[num][4] + "<br>" + " 理由：" + list[num][6] + "</p>";
+	var t = "<p><a href='javascript:output_detail(" + num + ")'>" + list[num][1] + " 【" + list[num][2] + "】</a> 価格：" + list[num][3] + " 在庫：" + list[num][4] + "<br>" + list[num][6] + "</p>";
 	
 
 	//データ出力

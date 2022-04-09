@@ -1,5 +1,6 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>テキスト検索機能の組み込み</title>
 <script type="text/javascript" src="xmlhttp.js"></script>
 <script type="text/javascript"><!--
@@ -23,10 +24,10 @@ if ((httpObj.readyState == 4) && (httpObj.status == 200))
 }
 // --></script>
 </head>
-<body onload="loadTextFile('sample3.csv')">
+<body onLoad="loadTextFile('sample3.csv')">
 <h1>テキスト検索機能の組み込み</h1>
 <!--★-->
-<form name="ajaxForm" onsubmit="output_result(); return false">
+<form name="ajaxForm" onSubmit="output_result(); return false">
 <!--★-->
 		<input name="searchtext" type="text"> 
 		<input type="submit" value="検索">
@@ -174,6 +175,5 @@ function output_detail(idx) {
 }
 // --></script>
 
-
-
-</body></html>
+</body>
+</html>

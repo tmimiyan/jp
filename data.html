@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>テキスト検索機能の組み込み</title>
+<script type="text/javascript" src="xmlhttp.js"></script>
+<script type="text/javascript"><!--
+function loadTextFile(fName)
+{
+httpObj = createXMLHttpRequest(displayData);
+if (httpObj)
+{
+httpObj.open("GET",fName,true);
+httpObj.send(null);
+}
+}
+function displayData()
+{
+if ((httpObj.readyState == 4) && (httpObj.status == 200))
+{
+	//CSVから配列変数へ読込
+	CSVtoAD(httpObj.responseText);
+	<!--★削除-->
+}
+}
+// --></script>
+</head>
+<body onLoad="loadTextFile('sample3.csv')">
+<h1>処分プレイヤーデータベース</h1>
+<!--★-->
+<form name="ajaxForm" onSubmit="output_result(); return false">
+<!--★-->
+		<input name="searchtext" type="text"> 
+		<input type="submit" value="検索">
+</form>
+<div id="resultData">入力例：「mac」「5,000」「液晶」</div>
+
+<script type="text/javascript"><!--
+//CSVから配列変数へ読込
+function CSVtoAD(csv) {
+	var n,m;
+	
+	var count_rec = 0; //レコードを数える
+	var count_fld = 0; //フィールドを数える
+	
+	//改行コード
+	csv = csv.replace(/\r\n/g,"\n");
+	csv = csv.replace(/\r/g,"\n");
+	
+	//""（フィールド内の"に対応）
+	csv = csv.replace(/""/g,"&quot;");
+	
+	list = new Array();
+	
+	//データ毎の取得処理
+	n = 0;
+	do {
+		//次の改行位置
+		var eor = csv.indexOf("\n",n);
+		
+		if (eor > -1) {
+			if (csv.substring(n,eor) != "") {
+				//フィールド用配列
+				if (count_fld == 0) list[count_rec] = new Array();
+				
+				//先頭に「"」がある場合
+				var m = csv.indexOf("\"",n);
+				if (m == n) {
+					//次の「"」をデータの終わりとする
+					eod = csv.indexOf("\"",n+1) + 1;
+					//レコードの終わり位置の修正（""内の改行を無視）
+					eor = csv.indexOf("\n",eod);
+					
+					m = 1;
+				} else {
+					m = 0;
+					eod = n;
+				}
+				
+				//「,」の位置
+				eod = csv.indexOf(",",eod);
+				//改行の前にある場合
+				if ((eod > -1) && (eod < eor)) {
+					//そのままフィールドの終わりとする
+				} else {
+					//改行位置をフィールドの終わりとする
+					eod = eor;
+				}
+				
+				//配列変数へ
+				list[count_rec][count_fld] = csv.substring(n+m,eod-m);
+												
+				//レコードの終わり
+				if (eod == eor) {
+					count_rec++;
+					count_fld = 0;
+				} else {
+					count_fld++;
+				}
+				
+				//次の検索開始位置
+				n = eod + 1;
+					
+			} else {
+				count_fld = 0;
+				n = eor + 1;
+			}		
+		}
+		
+		if (n > csv.length) eor = -1;
+
+	} while (eor > -1);
+}
+
+//★検索一覧の表示
+function output_result() {
+	var n,m,r;
+	//検索文字列を取得
+	var s = document.ajaxForm.searchtext.value;
+	//検索結果
+	t = "";
+	
+	//テキスト検索
+	for (n=1;n<list.length;n++) {
+		//検索ヒット
+		var bool = false;
+		//[1]商品名～[6]説明文を検索
+		for (m=1;m<7;m++) {
+			//正規表現（大文字小文字無視）
+			reg = new RegExp(s,"i")
+			//部分検索
+			r = list[n][m].match(reg);
+			if ((r != "") && (r != null)) {
+				//ヒットしたデータを取得
+				t += output_text(n);
+				//以後の項目は検索しない
+				break;
+			}
+		}
+	}
+		
+	//結果出力
+	document.getElementById("resultData").innerHTML = t;
+}
+
+//★データ取得
+function output_text(num) {
+	var n;
+		
+	var t = "<p>ゲーマータグ：<strong><span style="color: #3300FF;">" + list[num][2] + "</span></strong><br><br>執行日：<span style="color: #FF0000;">" + list[num][3] + "</span><br>執行期間：<span style="color: #FF0000;">" + list[num][4] + "</span><br><br><span style="color: #3399FF;">理由：</span>" + list[num][6] + "<br></p>";
+	
+
+	//データ出力
+	return t;
+}
+
+//詳細データの表示
+function output_detail(idx) {
+	var n;
+	
+	var t = "";
+	
+	if (idx > 0) {
+		t += "<table border='2'>";
+		t += "<tr><td bgcolor='#ffff99'>" + list[0][1] + "</td><td>" + list[idx][1] + "</td><td rowspan='5'><img src='img/" + list[idx][7] + "' height='200'></td></tr>";
+		t += "<tr><td bgcolor='#ffff99'>" + list[0][2] + "</td><td>" + list[idx][2] + "</td></tr>";
+		t += "<tr><td bgcolor='#ffff99'>" + list[0][3] + "</td><td align='right'>" + list[idx][3] + "</td></tr>";
+		t += "<tr><td bgcolor='#ffff99'>" + list[0][4] + "</td><td align='right'>" + list[idx][4] + "</td></tr>";
+		t += "<tr><td bgcolor='#ffff99'>" + list[0][5] + "</td><td align='center'>" + list[idx][5] + "</td></tr>";
+		t += "<tr><td bgcolor='#ffff99'>" + list[0][6] + "</td><td colspan='2'>" + list[idx][6].replace(/\n/g,"<br>") + "</td></tr>";
+		t += "</table>";
+	}
+	
+	//テーブル出力
+	document.getElementById("resultData").innerHTML = t;
+}
+// --></script>
+
+</body>
+</html>

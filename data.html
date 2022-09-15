@@ -35,7 +35,7 @@ if ((httpObj.readyState == 4) && (httpObj.status == 200))
 		<p align="center"><input name="searchtext" type="text">
 		<input type="submit" value="検索"></p>
 </form>
-<div id="resultData" class="sample"><p class=text>ここに検索が表示されます。</p></div>
+<div id="resultData" align="center"><p align="center">ここに検索が表示されます。</p></div>
 
 <script type="text/javascript"><!--
 //CSVから配列変数へ読込
@@ -177,18 +177,6 @@ function output_detail(idx) {
 	document.getElementById("resultData").innerHTML = t;
 }
 // --></script>
-
-<style>
-.sample {
-	margin: 16px auto;
-	text-align: center;
-	display: block;
-}
-.sample .text {
-	text-align: left;
-	display: inline-block;
-}
-</style>
 
 </body>
 </html>

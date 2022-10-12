@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="favicon2.ico">
+<title>Mimiyan,sサーバー</title>
+
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script type="text/javascript" language="JavaScript" src="CheckPassword80.js" charset="udf-8"></script>
+
+<!-- ウェブアプリマニフェストの読み込み -->
+<link rel="manifest" href="manifest.json">
+<!-- ServiceWorkerの登録 -->
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg);
+      });
+}
+</script>
+
+<!-- アドレスバー等のブラウザのUIを非表示 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<!-- ホーム画面に表示されるアプリ名 -->
+<meta name="apple-mobile-web-app-title" content="みみやんのホームページ">
+<!-- ホーム画面に表示されるアプリアイコン -->
+<link rel="apple-touch-icon" href="apple-touch-icon2.png">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+
+<a class="customs_button" href="index.html">戻る</a>
+
+<br>
+<h2><p id="Scripting System"><p align="center">Mimiyan,sサーバー一覧</p></p></h2>
+
+<div class="table-scroll">
+<table border="1" align="center" style="border-style:solid; border-collapse:collapse; border-width:3;">
+<tr>
+<td>クロスプレイサーバー</td>
+</tr>
+<tr>
+<td>JAVA版ID: clos-je.playit.gg</td>
+<td></td>
+</tr>
+<tr>
+<td>統合版ID: clos-be.playit.gg</td>
+<td> ポート: 62152</td>
+</tr>
+<br>
+<tr>
+<td>統合版オンリーサーバー(鉄道クラフトサーバー)</td>
+<td><a href="start.html"><input type="button" name="" value="詳細を見る"></a></td>
+</tr>
+</table>
+</div>
+
+<p align="center"><img src="imeg1.png" width="700" height="220" alt="" class="itn_btn" oncontextmenu="return false;"></p>
+<p align="center"><img src="images.jpg" width="299" height="168" alt="" class="itn_btne" oncontextmenu="return false;"></p>
+<br><br>
+
+</body>
+
+<style>
+.itn_btn{
+  width: 700px;
+  height: auto;
+}
+
+.itn_btn{
+   max-width: 90%;  /* 横幅に合わせて自動縮小するが、拡大はしない */
+}
+
+.itn_btne{
+  width: 299px;
+  height: auto;
+}
+
+.itn_btne{
+   max-width: 80%;  /* 横幅に合わせて自動縮小するが、拡大はしない */
+}
+</style>
+
+<style>
+td{
+  white-space: nowrap;
+}
+</style>
+
+<style>
+.table-scroll{
+  overflow: auto; /*スクロールさせる*/
+  white-space: nowrap; /*文字の折り返しを禁止*/
+}
+
+.table-scroll::-webkit-scrollbar{　　
+ height: 5px;
+}
+.table-scroll::-webkit-scrollbar-track{
+ background: #800;
+}
+.table-scroll::-webkit-scrollbar-thumb {
+ background: #999;
+}
+
+/* 以下、tableの指定 */
+.table-scroll table{
+  border-collapse:collapse;
+  border-spacing:0;
+  border-top:#ccc solid 1px;
+  border-left:#ccc solid 1px;
+}
+.table-scroll table th,
+.table-scroll table td{
+  padding:10px 15px;
+  font-weight:normal;
+  border-right:#ccc solid 1px;
+  border-bottom:#ccc solid 1px;
+  font-size:13px;
+}
+.table-scroll table th{
+  background:#eee;
+  width:150px;
+}
+</style>
+
+<style>
+a.customs_button
+{
+background-color: #afb2b8;
+color: black;
+font-weight: normal;
+padding: 2px 17px;
+border-radius: 12px;
+display: inline-block;
+text-decoration: none;
+text-align: center;
+position: relative;
+box-shadow: 0 3px 0 #91949a;
+font-size: 16px;
+}
+
+/* マウスカーソルON時に不透明度を変更 */
+a.customs_button:hover
+{
+opacity: 0.6;
+}
+
+/* クリック感を演出 */
+a.customs_button:active
+{
+top: 3px;
+box-shadow: none;
+}
+</style>

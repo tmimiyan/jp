@@ -1,3 +1,10 @@
+body {
+  background-image: url("main.png");
+  background-size: cover;
+  background-attachment: fixed;         /* 固定 */
+  background-position: center center;   /* 縦横中央 */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -493,4 +500,44 @@ div.omikujibase p.kCom {
    margin-left: auto;
    margin-right: auto;
    text-align: center;
+}
+
+.table-scrolle{
+  overflow: auto; /*スクロールさせる*/
+  white-space: nowrap; /*文字の折り返しを禁止*/
+}
+
+.table-scrolle::-webkit-scrollbar{　　
+ height: 5px;
+}
+.table-scrolle::-webkit-scrollbar-track{
+ background: #800;
+}
+.table-scrolle::-webkit-scrollbar-thumb {
+ background: #999;
+}
+
+/* 以下、tableの指定 */
+.table-scrolle table{
+  border-collapse:collapse;
+  border-spacing:0;
+  border-top:#FF2222 solid 0px;
+  border-left:#FF2222 solid 0px;
+}
+.table-scrolle table th,
+.table-scrolls table td{
+  padding:10px 15px;
+  font-weight:normal;
+  border-right:#FF2222 solid 0px;
+  border-bottom:#FF2222 solid 0px;
+  font-size:13px;
+}
+.table-scrolle table th{
+  background-image: url("menu.png");
+  width:200px;
+}
+
+.main{
+  background-image: url("menu.png");
+  width:90%;
 }

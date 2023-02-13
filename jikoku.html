@@ -1,0 +1,21 @@
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<p align="left"><a href="umain.html"><input type="button" name="" value="戻る"></a></p>
+
+<div align="center">
+<br>
+<h1>現在時刻</h1>
+<p id="time" style="font-size: 800%;"></p>
+</div>
+<script>
+setInterval(function(){
+  var dt = new Date();
+  document.getElementById("time").innerHTML = dt.toLocaleTimeString();
+},1000);
+</script>
+<style>
+input { font-size: 120%;
+    }
+</style>

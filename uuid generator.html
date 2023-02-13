@@ -1,0 +1,40 @@
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<p align="left"><a href="umain.html"><input type="button" name="" value="戻る"></a></p>
+
+<div align="center">
+<br>
+<h2>uuid generator</h2>
+<br><br>
+<label id="label1" style="font-size: 120%;"></label>
+<br><br><button  style="font-size: 120%;">create uuid</button>
+<button onclick="copyToClipboard('label1')" style="font-size: 120%;">Copy</button>
+<br><br><label id="label2" style="color:gray","font-size: 150%;"></label>
+</div>
+
+<script>
+function copyToClipboard(elementId) { var aux = document.createElement("input"); aux.setAttribute("value", document.getElementById(elementId).innerHTML); document.body.appendChild(aux); aux.select(); document.execCommand("copy"); document.body.removeChild(aux); document.getElementById('label2').innerHTML = 'Copyed!'; }
+
+document.querySelector("button:nth-of-type(1)").addEventListener("click", function() {
+document.getElementById("label1").innerHTML = uuidv4();
+document.getElementById("label2").innerHTML = "";
+});
+
+
+
+function uuidv4() {
+return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function(c) {
+var r = (Math.random() * 16) | 0,
+v = c == "x" ? r : (r & 0x3) | 0x8;
+return v.toString(16);
+});
+}
+</script>
+
+
+<style>
+input { font-size: 110%;
+    }
+</style>

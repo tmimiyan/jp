@@ -1,0 +1,35 @@
+a.custom_button
+{
+background-color: #808080;
+color: white;
+font-weight: bold;
+padding: 0px 14px;
+border-radius: 14px;
+display: inline-block;
+text-decoration: none;
+text-align: center;
+position: relative;
+box-shadow: 0 3px 0 #585858;
+font-size: 22px;
+margin: 5px 0px 5px 0px;
+}
+
+.menu
+{
+}
+
+/* マウスカーソルON時に不透明度を変更 */
+a.custom_button:hover
+{
+opacity: 0.6;
+}
+
+/* クリック感を演出 */
+a.custom_button:active
+{
+top: 3px;
+box-shadow: none;
+}
+
+
+}

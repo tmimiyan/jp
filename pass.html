@@ -1,0 +1,33 @@
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<p align="left"><a href="umain.html"><input type="button" name="" value="戻る"></a></p>
+<div align="center">
+<br><p>準強化パスワード生成ツール</p>
+
+<label id="label"></label>
+
+<br><br><button>強力なパスワードを生成</button>
+<br><p>同じパスワードは、生成されませんので、<br>忘れないよう、メモをとってださい。
+</div>
+
+<script>
+var button = document.querySelector("button");
+var label = document.querySelector("label");
+
+button.addEventListener("click", function() {
+var text = "";
+var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+for (var i = 0; i < 6; i++)
+text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+label.innerHTML = text;
+});
+</script>
+
+<style>
+input { font-size: 110%;
+    }
+</style>

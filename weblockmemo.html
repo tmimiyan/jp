@@ -1,0 +1,129 @@
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UDF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<div style="text-align:center">
+<p align="left"><a href="umain.html"><input type="button" name="" value="戻る"></a></p>
+<div id="div1" style="'display:none">
+<br><br><h2>パスワード入力</h2>
+<br><br><br><br>
+<input type="password" id="inputText1" placeholder="password">
+<button id="button1">確認</button>
+<br>
+<label id="label1"></label>
+</div>
+
+<div id="div2" style="display:none">
+<br><br>
+<button id="button4">設定</button>
+<button id="button8">保存</button>
+<button id="button7">メモ削除</button>
+<br><br><label id="label4"></label>
+<br><br><textarea id="text1" rows="20" cols="40" placeholder="メモを入力"></textarea>
+</div>
+
+<div id="div3" style="display:none">
+<br><br>
+<br><br><input type="text" id="inputText2" placeholder="create password">
+<button id="button2">パスワード設定</button>
+<button id="button6">パスワード削除</button>
+<br><br><label id="label3"></label>
+<br><br>
+<button id="button5">戻る</button>
+</div>
+
+</div>
+<script>
+document.getElementById('button1').onclick = () => {
+if (document.getElementById('inputText1').value === localStorage.getItem('storage1')) {
+document.getElementById('div1').style.display = 'none';
+document.getElementById('div2').style.display = 'block';
+} else {
+label1.innerHTML = 'パスワードが違います';
+setTimeout(function() {
+label1.innerHTML = '';
+}, 1200);
+}
+}
+</script>
+
+<script>
+document.getElementById('button4').onclick = () => {
+document.getElementById('div1').style.display = 'none';
+document.getElementById('div2').style.display = 'none';
+document.getElementById('div3').style.display = 'block';
+}
+</script>
+
+<script>
+document.getElementById('button5').onclick = () => {
+document.getElementById('div1').style.display = 'none';
+document.getElementById('div2').style.display = 'block';
+document.getElementById('div3').style.display = 'none';
+}
+</script>
+
+<script>
+button8.addEventListener('click', function() {
+localStorage.setItem('storage2', text1.value);
+label4.innerHTML = '保存完了';
+setTimeout(function() {
+label4.innerHTML = '';
+}, 2000);
+});
+</script>
+
+<script>
+button6.addEventListener('click', function() {
+localStorage.removeItem("storage1");
+localStorage.removeItem("storage3");
+label3.innerHTML = 'パスワードを削除しました';
+setTimeout(function() {
+label3.innerHTML = '';
+}, 1200);
+});
+</script>
+
+<script>
+button7.addEventListener('click', function() {
+localStorage.removeItem("storage2");
+label4.innerHTML = '削除完了';
+setTimeout(function() {
+label4.innerHTML = '';
+}, 2000);
+});
+</script>
+
+<script>
+button2.addEventListener('click', function() {
+localStorage.setItem('storage1', inputText2.value);
+localStorage.setItem('storage3',"lock");
+label3.innerHTML = 'パスワードを設定しました';
+setTimeout(function() {
+label3.innerHTML = '';
+}, 1200);
+});
+</script>
+
+<script>
+document.getElementById("text1").value = localStorage.getItem("storage2");
+</script>
+
+<script>
+if (localStorage.getItem("storage3") == "lock") {
+document.getElementById('div1').style.display = 'block';
+document.getElementById('div2').style.display = 'none';
+document.getElementById('div3').style.display = 'none';
+} else {
+document.getElementById('div1').style.display = 'none';
+document.getElementById('div2').style.display = 'block';
+document.getElementById('div3').style.display = 'none';
+}
+</script>
+
+<style>
+input { font-size: 110%;
+    }
+</style>
+
+</body>

@@ -1,0 +1,182 @@
+
+<!-- saved from url=(0040)https://tmimiyan.github.io/jp/laser.html -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+	<title>Bedrock Security Addon</title>
+<link rel="shortcut icon" href="https://tmimiyan.github.io/jp/favicon2.ico">
+<link rel="apple-touch-icon" href="https://tmimiyan.github.io/jp/apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+</head>
+
+<body>
+<h6><br><!--6-->
+
+<a class="customs_button" href="https://tmimiyan.github.io/jp/index.html">戻る</a>
+
+</h6><h2><p id="Scripting System"></p><p align="center">Bedrock Security Addon</p><p></p></h2>
+<b><span style="background-color:#FFFF99"><span style="font-size: 14pt;"><p align="center">最終更新日：2023/3/2</p></span></span></b>
+
+<p align="center"><img src="Bedrock Security setken.png" width="1974" height="2897" class="ffn_btn"></p>
+
+<div align="center">
+<details>
+<summary>利用規約（クリックで展開）</summary>
+<table border="1" width="350" cellspacing="1">
+<tr>
+<td>
+<label>一、 二次配布を原則禁止</label>
+<br><label>二、 改装配布禁止</label>
+<br><label>三、 アドオンファイルの展開禁止</label>
+<br><label>四、 以下の様な行為も禁止</label>
+<br><label>・荒らし行為等での使用</label>
+<br><label>・本来の用途以外での使用</label>
+<br><label>五、 テクスチャ等の流用禁止</label>
+<br><label>六、 その他、著作権法等に触れる行為の禁止</label>
+<br><label>七、 個人利用の改装も禁止</label>
+</td>
+</tr>
+</table>
+<br><input type="checkbox" id="checkbox1"><label style="vertical-align: 1px;">同意します。</label>
+</details>
+
+<br><select id="pulldownMenu1" disabled>
+<option value="">バージョンを選択</option>
+<option value="Bedrock Security Addon +1.19～ v2.0.2 .mcaddon">Ver 2.0.2</option>
+</select>
+
+<br><br><a id="button1" href="" download><input type="button" id="btn" disabled value="ダウンロード"></a>
+</div>
+
+<h2><br><br></h2>
+
+<script>
+document.getElementById('button1').onclick = function() {
+var e = document.getElementById("pulldownMenu1");
+var value1 = e.options[e.selectedIndex].value;
+document.getElementById('button1').href = value1;
+}
+</script>
+
+<script>
+document.getElementById('checkbox1').onclick = function() {
+if (document.getElementById('checkbox1').checked) {
+document.getElementById('btn').disabled = false;
+document.getElementById('pulldownMenu1').disabled = false;
+}
+
+if (document.getElementById('checkbox1').checked == false) { 
+document.getElementById('btn').disabled = true;
+document.getElementById('pulldownMenu1').disabled = true;
+}
+}
+</script>
+
+<style>
+input[type="button"] {
+	font-weight:bold;
+	text-decoration:none;
+	font-family:Arial;
+	box-shadow:inset #47ff8e 0px 5px 11px -17px;
+	o-box-shadow:inset #47ff8e 0px 5px 11px -17px;
+	-moz-box-shadow:inset #47ff8e 0px 5px 11px -17px;
+	-webkit-box-shadow:inset #47ff8e 0px 5px 11px -17px;
+	background:#6ef592;
+	background:-o-linear-gradient(90deg, #6ef592, #1cab15);
+	background:-moz-linear-gradient( center top, #6ef592 5%, #1cab15 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #6ef592), color-stop(1, #1cab15) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6ef592', endColorstr='#1cab15');
+	background:-webkit-linear-gradient(#6ef592, #1cab15);
+	background:-ms-linear-gradient(#6ef592, #1cab15);
+	background:linear-gradient(#6ef592, #1cab15);
+	text-indent:0px;
+	line-height:25px;
+	-moz-border-radius:41px;
+	-webkit-border-radius:41px;
+	border-radius:41px;
+	text-align:center;
+	vertical-align:middle;
+	display:inline-block;
+	font-size:20px;
+	color:#ffffff;
+	width:170px;
+	height:52px;
+	padding:13px;
+	text-shadow:#6daac2 2px 2px 0px;
+	border-color:#a8a8a8;
+	border-width:2px;
+	border-style:solid;
+}
+
+input[type="button"]:active {
+	position:relative;
+	top:3px
+}
+
+input[type="button"]:disabled {
+    filter:brightness(0.75);
+    cursor:not-allowed;
+    position:relative;
+    top:0px
+}
+
+input[type="button"]:hover {
+	background:#1cab15;
+	background:-o-linear-gradient(90deg, #1cab15, #6ef592);
+	background:-moz-linear-gradient( center top, #1cab15 5%, #6ef592 100% );
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1cab15), color-stop(1, #6ef592) );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1cab15', endColorstr='#6ef592');
+	background:-webkit-linear-gradient(#1cab15, #6ef592);
+	background:-ms-linear-gradient(#1cab15, #6ef592);
+	background:linear-gradient(#1cab15, #6ef592);
+}
+</style>
+
+<style>
+.ffn_btn {
+  width: 600px;
+  height: auto;
+}
+
+.ffn_btn {
+   max-width: 80%;  /* 横幅に合わせて自動縮小するが、拡大はしない */
+}
+</style>
+
+<style>
+td{
+  white-space: nowrap;
+}
+</style>
+
+<style>
+a.customs_button
+{
+background-color: #afb2b8;
+color: black;
+font-weight: normal;
+padding: 2px 17px;
+border-radius: 12px;
+display: inline-block;
+text-decoration: none;
+text-align: center;
+position: relative;
+box-shadow: 0 3px 0 #91949a;
+font-size: 16px;
+}
+
+/* マウスカーソルON時に不透明度を変更 */
+a.customs_button:hover
+{
+opacity: 0.6;
+}
+
+/* クリック感を演出 */
+a.customs_button:active
+{
+top: 3px;
+box-shadow: none;
+}
+</style>
+</body></html>

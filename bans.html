@@ -17,8 +17,8 @@
 <h2><p id="Scripting System"><p align="center">処分プレイヤー等一覧</p></p></h2>
 
 <form name="highlight" align="center" class="search_container" >
-<input type="text" id="word" placeholder="処分者名(プレイヤー名)を入力" size="23" autocomplete="off" /> <input type="button" onclick="doHighlight()" value="検索" />
-<br><input type="reset" name="reset" id="reset" value="リセット">
+<input type="text" id="word" placeholder="処分者名(プレイヤー名)を入力" size="23" autocomplete="off" /> <input type="button" onclick="doHighlight()" value="&#xf002" />
+<br><br><input type="reset" name="reset" id="reset" value="リセット">
 </form>
 	
 <b><span style="background-color:#FFFF99"><span style="font-size: 14pt;"><p align="center">最終更新日：2023/11/28</p></span></span></b>
@@ -308,6 +308,7 @@ behavior: "smooth"
 <style>
 
 .search_container{
+　text-align: center;
   box-sizing: border-box;
   position: relative;
   border: 1px solid #999;
@@ -318,13 +319,16 @@ behavior: "smooth"
   overflow: hidden;
 }
 .search_container input[type="text"]{
+  text-align: center;
   border: none;
   height: 2.0em;
 }
 .search_container input[type="text"]:focus {
+  text-align: center;
   outline: 0;
 }
 .search_container input[type="button"]{
+  text-align: center;
   cursor: pointer;
   font-family: FontAwesome;
   font-size: 1.3em;

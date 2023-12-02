@@ -294,9 +294,9 @@ for (i in word) {
 if (word[i] != "") {
 $("#target").removeHighlight();
 $("#target").highlight(word[i]);
-var ypos = $(".highlight").offset().center;
+var ypos = $(".highlight").offset().top;
 window.scrollTo({
-left: 0,
+top: 0,
 center: ypos,
 behavior: "smooth"
 });

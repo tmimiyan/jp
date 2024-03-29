@@ -32,8 +32,15 @@ return false;
 <td style="border-style:solid; border-width:3; padding:9px"><strong><p align="center"><a class="custom_button" href="また会えるまで.mp3" download="また会えるまで.mp3">ダウンロード</a></p></strong></span></td>
 </tr>
 </table>
-
 </div>
+<br>
+<p align="center">歌詞</p>
+<div class="table-scrollc">
+<table border="1" align="center" style="border-style:solid; border-collapse:collapse; border-width:3;">
+<tr><th style="border-style:solid; border-width:3;">あなたがここを離れても<br>みんなはあなたを忘れません<br>たとえはなれていても<br>心でつながるわたしたちの思い<br><br>元気ですか。みんなも元気です<br>あの日から少し寂しくなったけれど<br>あの絵を見る度に思い出します<br>あの日の笑顔<br><br>あれから月日が経ちました<br>あなたは今なにをしていますか<br>こちらは笑顔で日々を過ごしています<br>また来ることを願っています<br><br>ありがとう、ありがとう<br>ここに居てくれて<br>わたしたちは感謝しています<br>あなたとまた会えるまで</th></tr>
+</table>
+</div>
+
 <h2><br><br></h2>
 
 </body>
@@ -109,6 +116,40 @@ td{
 .table-scroll table th{
   background:#eee;
   width:180px;
+}
+
+.table-scrollc{
+  overflow: auto; /*スクロールさせる*/
+  white-space: nowrap; /*文字の折り返しを禁止*/
+}
+
+.table-scrollc::-webkit-scrollbar{　　
+ height: 5px;
+}
+.table-scrollc::-webkit-scrollbar-track{
+ background: #800;
+}
+.table-scrollc::-webkit-scrollbar-thumb {
+ background: #999;
+}
+/* 以下、tableの指定 */
+.table-scrollc table{
+  border-collapse:collapse;
+  border-spacing:0;
+  border-top:#ccc solid 1px;
+  border-left:#ccc solid 1px;
+}
+.table-scrollc table th,
+.table-scrollc table td{
+  padding:10px 15px;
+  font-weight:normal;
+  border-right:#ccc solid 1px;
+  border-bottom:#ccc solid 1px;
+  font-size:13px;
+}
+.table-scrollc table th{
+  background:#eee;
+  width:250px;
 }
 </style>
 

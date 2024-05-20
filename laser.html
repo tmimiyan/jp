@@ -58,12 +58,7 @@
 <br><input type="checkbox" id="checkbox1"><label style="vertical-align: 1px;">同意します。</label>
 </details>
 
-<br><select id="pulldownMenu1" disabled="">
-<option value="none">バージョンを選択</option>
-<option value="Bedrock Security Addon 1.20.80～ v7.0.1.mcaddon">Ver 7.0.1</option>
-</select>
-
-<br><br><a id="button1" href="https://tmimiyan.github.io/jp/laser.html" download=""><input type="button" id="btn" disabled="" value="ダウンロード"></a>
+<br><br><a id="button1" download="Bedrock Security Addon 1.20.80～ v7.0.1.mcaddon"><input type="button" id="btn" disabled="" value="ダウンロード"></a>
 </div>
 
 <h2><br></h2>
@@ -79,14 +74,6 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 <h2><br></h2>
-
-<script>
-document.getElementById('button1').onclick = function() {
-var e = document.getElementById("pulldownMenu1");
-var value1 = e.options[e.selectedIndex].value;
-document.getElementById('button1').href = value1;
-}
-</script>
 
 <script>
 document.getElementById('checkbox1').onclick = function() {
